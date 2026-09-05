@@ -1,0 +1,52 @@
+---
+layout: default
+title: 丙級美容輔導
+description: 整理丙級美容考照流程與準備重點，並提供需要實作修正與陪練者的證照輔導。
+permalink: /license/
+---
+<section class="page-hero">
+<div class="container">
+<div class="section-title">
+<span class="eyebrow">想進入美業？</span>
+<h1>可以先把「丙級美容考照」這件事看懂</h1>
+<p class="lead">考照流程與準備重點，先從免費內容開始了解；需要實作指導時，再來找我們。</p>
+</div>
+</div>
+</section>
+
+<section class="content-section">
+<div class="container">
+<div class="content-grid">
+{% for path in site.data.beauty_paths %}
+<article class="article-card">
+<div class="meta">{{ path.kicker }}</div>
+<h2>{{ path.title }}</h2>
+<p>{{ path.description }}</p>
+{% if path.external %}
+<a class="btn text" href="{{ path.url }}" target="_blank" rel="noopener">{{ path.cta }} →</a>
+{% else %}
+<a class="btn text" href="{{ path.url | relative_url }}">{{ path.cta }} →</a>
+{% endif %}
+</article>
+{% endfor %}
+</div>
+
+{% if site.license.size > 0 %}
+<div class="section-title" style="margin-top:60px">
+<span class="eyebrow">考照文章</span>
+<h2>從官方資訊開始整理</h2>
+</div>
+<div class="content-grid">
+{% assign posts = site.license | sort: "date" | reverse %}
+{% for post in posts %}
+<article class="article-card">
+<div class="meta">{{ post.date | date: "%Y-%m-%d" }}</div>
+<h3>{{ post.title }}</h3>
+{% if post.description %}<p>{{ post.description }}</p>{% endif %}
+<a class="btn text" href="{{ post.url | relative_url }}">閱讀文章 →</a>
+</article>
+{% endfor %}
+</div>
+{% endif %}
+</div>
+</section>

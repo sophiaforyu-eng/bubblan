@@ -1,0 +1,44 @@
+---
+layout: default
+title: 居家保養
+description: 從清潔、保濕、防曬與日常習慣整理居家肌膚照護方式，並透明揭露花漾皙品牌代理關係。
+permalink: /homecare/
+---
+<section class="page-hero">
+<div class="container">
+<div class="section-title list-page-intro">
+<span class="eyebrow">居家保養</span>
+<h1>把日常保養，做得簡單一點。</h1>
+<p class="lead">從清潔、保濕、防曬到日常習慣，先理解自己需要什麼，再決定產品怎麼搭配。</p>
+<span class="product-agent-note">泡泡臉八德館為花漾皙品牌代理</span>
+</div>
+</div>
+</section>
+
+<section class="content-section">
+<div class="container">
+<div class="brand-disclosure">
+我們會清楚標示泡泡臉代理的花漾皙產品；文章仍以實際需求為出發點，不把每一個肌膚問題都硬連到產品。
+</div>
+
+{% if site.homecare.size > 0 %}
+<div class="content-grid">
+{% assign posts = site.homecare | sort: "date" | reverse %}
+{% for post in posts %}
+<article class="article-card">
+<div class="meta">{{ post.date | date: "%Y-%m-%d" }}</div>
+<h2>{{ post.title }}</h2>
+{% if post.description %}<p>{{ post.description }}</p>{% endif %}
+<a class="btn text" href="{{ post.url | relative_url }}">閱讀指南 →</a>
+</article>
+{% endfor %}
+</div>
+{% else %}
+<div class="topic-grid">
+{% for topic in site.data.homecare_topics %}
+<div class="topic-card"><h3>{{ topic.title }}</h3><p>{{ topic.description }}</p></div>
+{% endfor %}
+</div>
+{% endif %}
+</div>
+</section>

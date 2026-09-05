@@ -1,0 +1,33 @@
+- name: 泡泡進階保濕
+  price: "$1088"
+  summary: 肌膚潔淨｜毛孔淨化｜補水保濕
+  image: /assets/images/services/hydration.webp
+  image_alt: 泡泡進階保濕 $1088
+  detail_url:
+  inquiry: https://lin.ee/oFRYAIr
+
+- name: 水油平衡護理
+  price: "$1588"
+  summary: 角質調理｜毛孔淨化｜水油平衡
+  image: /assets/images/services/balance.webp
+  image_alt: 水油平衡護理 $1588
+  detail_url:
+  inquiry: https://lin.ee/oFRYAIr
+
+- name: 極致膠原肌膚修護
+  price: "$1888"
+  summary: 肌膚潔淨｜膠原保養｜彈潤修護
+  include: 本項目含手部保養
+  image: /assets/images/services/collagen-repair.webp
+  image_alt: 極致膠原肌膚修護 $1888
+  detail_url:
+  inquiry: https://lin.ee/oFRYAIr
+
+- name: 極致膠原緊緻管理
+  price: "$2288"
+  summary: 肌膚潔淨｜膠原保養｜緊緻調理
+  include: 本項目含手部保養
+  image: /assets/images/services/collagen-firming.webp
+  image_alt: 極致膠原緊緻管理 $2288
+  detail_url:
+  inquiry: https://lin.ee/oFRYAIr

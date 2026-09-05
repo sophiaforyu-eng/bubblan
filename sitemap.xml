@@ -1,0 +1,17 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% for page_item in site.pages %}
+  {% unless page_item.sitemap == false or page_item.url contains '/404' %}
+  <url><loc>{{ page_item.url | absolute_url }}</loc></url>
+  {% endunless %}
+{% endfor %}
+{% for post in site.knowledge %}<url><loc>{{ post.url | absolute_url }}</loc></url>{% endfor %}
+{% for post in site.homecare %}<url><loc>{{ post.url | absolute_url }}</loc></url>{% endfor %}
+{% for post in site.license %}<url><loc>{{ post.url | absolute_url }}</loc></url>{% endfor %}
+{% assign approved_stories = site.stories | where: "consent_public", true %}
+{% for post in approved_stories %}<url><loc>{{ post.url | absolute_url }}</loc></url>{% endfor %}
+{% for post in site.products %}<url><loc>{{ post.url | absolute_url }}</loc></url>{% endfor %}
+</urlset>

@@ -1,0 +1,40 @@
+---
+layout: default
+title: 預約與來店資訊
+description: 泡泡臉八德館 LINE 預約、地址、電話與 Google Maps 導航。
+permalink: /booking/
+---
+<section class="page-hero">
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">預約</span>
+      <h1>如果妳想先問問，也可以。</h1>
+      <p class="lead">不確定適合哪一項、想先了解，或只是想確認預約時間，都可以先從 LINE 開始。</p>
+    </div>
+  </div>
+</section>
+<section class="content-section">
+  <div class="container">
+    <div class="contact-grid">
+      <article class="contact-card highlight">
+        <div class="gift-kicker" style="color:#F7E9B2">官方 LINE 好友限定</div>
+        <h2 style="margin-top:8px">泡泡體驗金 $100</h2>
+        <p>加入好友即可領取。</p>
+        <div class="btns"><a class="btn secondary" href="{{ site.business.line }}" target="_blank" rel="noopener">加入 LINE・領取體驗金</a></div>
+      </article>
+      <article class="contact-card">
+        <h2>來店資訊</h2>
+        <div class="contact-list">
+          <div class="contact-item"><b>店名</b><span>{{ site.business.name }}</span></div>
+          <div class="contact-item"><b>地址</b><span>{{ site.business.address }}</span></div>
+          <div class="contact-item"><b>時間</b><span>{{ site.business.hours }}</span></div>
+          <div class="contact-item"><b>電話</b><a href="tel:{{ site.business.phone_href }}">{{ site.business.phone_display }}</a></div>
+        </div>
+        <div class="btns">
+          <a class="btn primary" href="{{ site.business.maps }}" target="_blank" rel="noopener">Google Maps 導航</a>
+          <a class="btn secondary" href="{{ site.business.line }}" target="_blank" rel="noopener">LINE 詢問／預約</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

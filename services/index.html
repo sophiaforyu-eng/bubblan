@@ -1,0 +1,55 @@
+---
+layout: default
+title: 護膚項目
+description: 泡泡臉八德館護膚項目與透明價目。單次消費、免儲值、無推銷。
+permalink: /services/
+---
+<section class="page-hero">
+<div class="container">
+<div class="section-title">
+<span class="eyebrow">護膚項目</span>
+<h1>透明價目，依需求選擇適合自己的護膚方式。</h1>
+<p class="lead">不一定要選價格最高的，適合現在的膚況更重要。</p>
+</div>
+</div>
+</section>
+
+<section class="content-section soft">
+<div class="container carousel-shell" data-carousel>
+<div class="carousel-head">
+<div>
+<span class="eyebrow">左右瀏覽</span>
+<h2 style="margin:8px 0 0">選一個現在想了解的護膚項目</h2>
+</div>
+<div class="carousel-actions">
+<button class="carousel-arrow" type="button" data-prev aria-label="往左瀏覽">←</button>
+<button class="carousel-arrow" type="button" data-next aria-label="往右瀏覽">→</button>
+</div>
+</div>
+
+<div class="carousel-track">
+{% for item in site.data.services %}
+<article class="carousel-item">
+{% if item.detail_url %}
+<a class="service-slider-card" href="{{ item.detail_url | relative_url }}">
+{% else %}
+<a class="service-slider-card" href="{{ item.inquiry }}" target="_blank" rel="noopener">
+{% endif %}
+<img src="{{ item.image | relative_url }}" alt="{{ item.image_alt | escape }}">
+<div class="service-link">
+<span>{% if item.detail_url %}查看護膚內容{% else %}詢問這項護膚{% endif %}</span><span>→</span>
+</div>
+</a>
+</article>
+{% endfor %}
+</div>
+
+<div class="service-note">
+<div>
+<strong>單次消費｜免儲值｜無推銷</strong><br>
+<span class="lead" style="font-size:.9rem">每次來店各自結帳，不需預購多堂課。</span>
+</div>
+<a class="btn secondary" href="{{ site.business.line }}" target="_blank" rel="noopener">不知道怎麼選？先問問</a>
+</div>
+</div>
+</section>

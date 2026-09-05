@@ -1,0 +1,39 @@
+---
+layout: default
+title: 肌膚知識
+description: 用看得懂的方式整理粉刺、毛孔、乾燥、缺水、暗沉與肌膚照護相關知識。
+permalink: /knowledge/
+---
+<section class="page-hero">
+<div class="container">
+<div class="section-title list-page-intro">
+<span class="eyebrow">肌膚知識</span>
+<h1>先理解肌膚，再決定怎麼照顧。</h1>
+<p class="lead">把常見肌膚問題拆開說清楚，讓妳理解原因、照護方向，以及什麼時候需要調整日常習慣。</p>
+</div>
+</div>
+</section>
+
+<section class="content-section">
+<div class="container">
+{% if site.knowledge.size > 0 %}
+<div class="content-grid">
+{% assign posts = site.knowledge | sort: "date" | reverse %}
+{% for post in posts %}
+<article class="article-card">
+<div class="meta">{{ post.date | date: "%Y-%m-%d" }}</div>
+<h2>{{ post.title }}</h2>
+{% if post.description %}<p>{{ post.description }}</p>{% endif %}
+<a class="btn text" href="{{ post.url | relative_url }}">閱讀文章 →</a>
+</article>
+{% endfor %}
+</div>
+{% else %}
+<div class="topic-grid">
+{% for topic in site.data.knowledge_topics %}
+<div class="topic-card"><h3>{{ topic.title }}</h3><p>{{ topic.description }}</p></div>
+{% endfor %}
+</div>
+{% endif %}
+</div>
+</section>

@@ -1,0 +1,318 @@
+---
+layout: default
+title:
+description: 桃園八德泡泡臉護膚空間。單次消費、免儲值、無推銷，提供透明護膚價目、肌膚知識、居家保養與丙級美容考照輔導。
+---
+<main id="top">
+<section class="hero">
+<div class="container hero-grid">
+<div class="hero-copy">
+<div class="small-brand"></div>
+<h1 class="hero-title">
+<span>愛自己</span>
+<span>不該從一場有壓力的</span>
+<span>消費開始</span>
+</h1>
+<div aria-label="安心消費方式" class="reassurance">
+<div class="pill"><strong>單次消費</strong><span>不需預購多堂課</span></div>
+<div class="pill"><strong>免儲值</strong><span>不用先放一筆錢</span></div>
+<div class="pill"><strong>無推銷</strong><span>選擇權留給妳</span></div>
+</div>
+<p class="lead">從了解自己的肌膚開始，選擇真正適合妳現在需要的護膚方式。</p>
+<div class="btns">
+<a class="btn primary" href="{{ '/services/' | relative_url }}">看看護膚項目</a>
+<a class="btn secondary" href="https://lin.ee/oFRYAIr" rel="noopener" target="_blank">先用 LINE 問問</a>
+</div>
+<div class="brand-line">把愛自己，從口號變成行動。</div>
+</div>
+<div aria-label="泡泡臉八德館店內實景" class="hero-visual">
+<div class="hero-photo"><img alt="泡泡臉八德館店內護膚空間實景" src="{{ '/assets/images/environment/store-interior.webp' | relative_url }}"/></div>
+<span class="bubble b1"></span><span class="bubble b2"></span>
+</div>
+</div>
+</section>
+<section class="section soft" id="facebook">
+<div class="container story-strip">
+<div>
+<span class="eyebrow">品牌日常</span>
+<h2 class="brand-daily-title">和妳聊聊生活，也聊聊自己</h2>
+<p class="lead">有時候累的，不只是工作。是每天記得所有人的需要，卻常常最後才想到自己。</p>
+<p>我們每天寫一篇關於女性生活的文字，聊工作、家庭、關係，也聊那些很少說出口的疲憊。不是要告訴妳應該怎麼生活，只是想陪妳記得——照顧自己，也應該是生活裡的一件事。</p>
+<a class="btn text" href="https://www.facebook.com/share/1EwEmAwMHY/" rel="noopener" target="_blank">看看今天的女性共鳴文章 →</a>
+</div>
+<div class="quote-card">
+<p>「我們講的愛自己，不只是來做一次臉，而是願意把自己也放回生活裡。」</p>
+<div class="note">泡泡臉八德館 Facebook｜每日女性共鳴內容</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="ai-card">
+<div>
+<span class="eyebrow" style="color:#EBDDFA">AI 肌膚檢測</span>
+<h2 class="ai-main-title" style="margin-top:10px">
+<span class="ai-title-line">先了解肌膚，</span><span class="ai-title-line">再決定怎麼保養。</span>
+</h2>
+</div>
+<a class="btn secondary" href="https://ai.bubblan.tw/" rel="noopener" target="_blank">了解 AI 肌膚檢測 →</a>
+</div>
+</div>
+</section>
+<section class="section soft" id="services">
+<div class="container carousel-shell" data-carousel>
+<div class="carousel-head">
+<div class="section-title service-section-title" style="margin-bottom:0">
+<span class="eyebrow">護膚項目</span>
+<h2 class="service-main-title">透明價目，依需求選擇適合自己的護膚方式。</h2>
+<p class="lead">不一定要選價格最高的，適合現在的膚況更重要。</p>
+</div>
+<div class="carousel-actions" aria-label="護膚項目左右瀏覽">
+<button class="carousel-arrow" type="button" data-prev aria-label="往左瀏覽">←</button>
+<button class="carousel-arrow" type="button" data-next aria-label="往右瀏覽">→</button>
+</div>
+</div>
+
+<div class="carousel-track">
+{% for item in site.data.services %}
+<article class="carousel-item">
+{% if item.detail_url %}
+<a class="service-slider-card" href="{{ item.detail_url | relative_url }}" aria-label="{{ item.name }} {{ item.price }}，查看護膚內容">
+{% else %}
+<a class="service-slider-card" href="{{ item.inquiry }}" target="_blank" rel="noopener" aria-label="{{ item.name }} {{ item.price }}，LINE 詢問">
+{% endif %}
+<img src="{{ item.image | relative_url }}" alt="{{ item.image_alt | escape }}">
+<div class="service-link">
+<span>{% if item.detail_url %}查看護膚內容{% else %}詢問這項護膚{% endif %}</span><span>→</span>
+</div>
+</a>
+</article>
+{% endfor %}
+</div>
+
+<div class="service-note">
+<div>
+<strong>單次消費｜免儲值｜無推銷</strong><br>
+<span class="lead" style="font-size:.9rem">每次來店各自結帳，不需預購多堂課。</span>
+</div>
+<a class="btn secondary" href="{{ site.business.line }}" target="_blank" rel="noopener">不知道怎麼選？先問問</a>
+</div>
+
+<div class="line-gift">
+<div>
+<div class="gift-kicker">官方 LINE 好友限定</div>
+<div class="gift-title">泡泡體驗金 <b>$100</b></div>
+<div class="lead" style="font-size:.9rem">加入好友即可領取。</div>
+</div>
+<a class="btn primary" href="{{ site.business.line }}" target="_blank" rel="noopener">加入 LINE・領取體驗金</a>
+</div>
+</div>
+</section>
+{% assign approved_stories = site.stories | where: "consent_public", true | sort: "date" | reverse %}
+{% if approved_stories.size > 0 %}
+<section class="section" id="stories">
+<div class="container">
+<div class="section-title">
+<span class="eyebrow">真實來店痕跡</span>
+<h2>來過泡泡臉的她們</h2>
+<p class="lead">每一次來店，都是一段真實的照顧紀錄。這裡只呈現經客人同意公開的來店故事與回饋。</p>
+</div>
+<div class="stories-grid">
+{% for story in approved_stories limit:3 %}
+<article class="story-card">
+{% if story.image %}
+<img class="story-photo" src="{{ story.image | relative_url }}" alt="{{ story.image_alt | default: story.title | escape }}">
+{% endif %}
+<div>
+<h3>{{ story.title }}</h3>
+{% if story.description %}<p>{{ story.description }}</p>{% endif %}
+</div>
+<a class="btn text" href="{{ story.url | relative_url }}">閱讀來店故事 →</a>
+</article>
+{% endfor %}
+</div>
+</div>
+</section>
+{% endif %}
+<section class="section soft section-separator" id="knowledge">
+<div class="container">
+<div class="section-title">
+<span class="eyebrow">專業內容</span>
+<h2>從了解肌膚，到學會日常照顧</h2>
+<p class="lead">專業不用很難懂，我們把肌膚問題整理成真正用得到的內容。</p>
+</div>
+
+<div class="sub-carousel-block carousel-shell" data-carousel>
+<div class="sub-carousel-title">
+<div>
+<h3>肌膚知識</h3>
+<p>先理解「為什麼」，再決定該怎麼照顧。</p>
+</div>
+<div class="carousel-actions" aria-label="肌膚知識左右瀏覽">
+<button class="carousel-arrow" type="button" data-prev aria-label="往左瀏覽">←</button>
+<button class="carousel-arrow" type="button" data-next aria-label="往右瀏覽">→</button>
+</div>
+</div>
+
+<div class="carousel-track">
+{% assign latest_knowledge = site.knowledge | sort: "date" | reverse %}
+{% if latest_knowledge.size > 0 %}
+{% for post in latest_knowledge %}
+<article class="carousel-item editorial-card topic-card-premium">
+<div class="card-kicker">肌膚知識</div>
+<h3>{{ post.title }}</h3>
+{% if post.description %}<p>{{ post.description }}</p>{% endif %}
+<a class="btn text card-link" href="{{ post.url | relative_url }}">閱讀文章 →</a>
+</article>
+{% endfor %}
+{% else %}
+{% for topic in site.data.knowledge_topics %}
+<article class="carousel-item editorial-card topic-card-premium">
+<div class="topic-num">0{{ forloop.index }}</div>
+<div class="card-kicker">主題方向</div>
+<h3>{{ topic.title }}</h3>
+<p>{{ topic.description }}</p>
+</article>
+{% endfor %}
+{% endif %}
+</div>
+
+<div style="margin-top:4px"><a class="btn text" href="{{ '/knowledge/' | relative_url }}">進入肌膚知識 →</a></div>
+</div>
+
+<div class="sub-carousel-block carousel-shell" id="homecare" data-carousel>
+<div class="sub-carousel-title">
+<div>
+<h3>居家保養</h3>
+<p>知道原因之後，再看看日常可以怎麼做。</p>
+</div>
+<div class="carousel-actions" aria-label="居家保養左右瀏覽">
+<button class="carousel-arrow" type="button" data-prev aria-label="往左瀏覽">←</button>
+<button class="carousel-arrow" type="button" data-next aria-label="往右瀏覽">→</button>
+</div>
+</div>
+
+<div class="carousel-track">
+{% assign latest_homecare = site.homecare | sort: "date" | reverse %}
+{% if latest_homecare.size > 0 %}
+{% for post in latest_homecare %}
+<article class="carousel-item editorial-card topic-card-premium">
+<div class="card-kicker">居家保養</div>
+<h3>{{ post.title }}</h3>
+{% if post.description %}<p>{{ post.description }}</p>{% endif %}
+<a class="btn text card-link" href="{{ post.url | relative_url }}">閱讀指南 →</a>
+</article>
+{% endfor %}
+{% else %}
+{% for topic in site.data.homecare_topics %}
+<article class="carousel-item editorial-card topic-card-premium">
+<div class="topic-num">0{{ forloop.index }}</div>
+<div class="card-kicker">{{ topic.kicker | default: "日常保養" }}</div>
+<h3>{{ topic.title }}</h3>
+<p>{{ topic.description }}</p>
+</article>
+{% endfor %}
+{% endif %}
+</div>
+
+<div style="margin-top:4px"><a class="btn text" href="{{ '/homecare/' | relative_url }}">進入居家保養 →</a></div>
+</div>
+</div>
+</section>
+<section class="section" id="license">
+<div class="container license-shell carousel-shell" data-carousel>
+<div class="carousel-head">
+<div class="section-title" style="margin-bottom:0">
+<span class="eyebrow" style="color:#D8C8E7">想進入美業？</span>
+<h2 class="license-main-title">可以先把「丙級美容考照」這件事看懂</h2>
+<p>考照流程與準備重點，先從免費內容開始了解；需要實作指導時，再來找我們。</p>
+</div>
+<div class="carousel-actions" aria-label="美業內容左右瀏覽">
+<button class="carousel-arrow" type="button" data-prev aria-label="往左瀏覽">←</button>
+<button class="carousel-arrow" type="button" data-next aria-label="往右瀏覽">→</button>
+</div>
+</div>
+
+<div class="carousel-track">
+{% for path in site.data.beauty_paths %}
+<article class="carousel-item editorial-card beauty-card{% if path.theme == 'light' %} open{% endif %}">
+<div class="card-kicker">{{ path.kicker }}</div>
+<h3>{{ path.title }}</h3>
+<p>{{ path.description }}</p>
+{% if path.external %}
+<a class="btn secondary card-link" href="{{ path.url }}" target="_blank" rel="noopener">{{ path.cta }} →</a>
+{% else %}
+<a class="btn secondary card-link" href="{{ path.url | relative_url }}">{{ path.cta }} →</a>
+{% endif %}
+</article>
+{% endfor %}
+</div>
+
+<div class="license-quote">知道考什麼，是第一步；真正做得出來，才是考照準備的開始。</div>
+</div>
+</section>
+<section class="section soft" id="about">
+<div class="container carousel-shell" data-carousel>
+<div class="carousel-head">
+<div class="section-title" style="margin-bottom:0">
+<span class="eyebrow">關於我們</span>
+<h2 class="about-main-title"><span>從專業到細節</span><span>我們都放在心上</span></h2>
+</div>
+<div class="carousel-actions" aria-label="團隊成員左右瀏覽">
+<button class="carousel-arrow" type="button" data-prev aria-label="往左瀏覽">←</button>
+<button class="carousel-arrow" type="button" data-next aria-label="往右瀏覽">→</button>
+</div>
+</div>
+
+<div class="carousel-track">
+{% for person in site.data.team %}
+<article class="carousel-item editorial-card team-slider-card">
+{% if person.image %}
+<img class="person-photo" src="{{ person.image | relative_url }}" alt="{{ person.alt | escape }}">
+{% endif %}
+<div class="role">{{ person.role }}</div>
+<h3>{{ person.name }}</h3>
+<p>{{ person.bio }}</p>
+<div class="credentials">
+{% for credential in person.credentials %}
+<span>{{ credential }}</span>
+{% endfor %}
+</div>
+</article>
+{% endfor %}
+</div>
+
+<div style="margin-top:6px"><a class="btn text" href="{{ '/about/' | relative_url }}">認識泡泡臉團隊 →</a></div>
+</div>
+</section>
+<section class="section" id="contact">
+<div class="container">
+<div class="section-title">
+<span class="eyebrow">下一步</span>
+<h2>如果妳想先問問，也可以。</h2>
+<p class="lead">不確定適合哪一項、想先了解膚況，或只是想確認預約時間，都可以先從 LINE 開始。</p>
+</div>
+<div class="contact-grid">
+<article class="contact-card highlight">
+<div class="gift-kicker" style="color:#F7E9B2">官方 LINE 好友限定</div>
+<h2 style="margin-top:8px">泡泡體驗金 $100</h2>
+<p>加入好友即可領取。</p>
+<div class="btns"><a class="btn secondary" href="https://lin.ee/oFRYAIr" rel="noopener" target="_blank">加入 LINE・領取體驗金</a></div>
+</article>
+<article class="contact-card">
+<h3>來店資訊</h3>
+<div class="contact-list">
+<div class="contact-item"><b>店名</b><span>泡泡臉八德館</span></div>
+<div class="contact-item"><b>地址</b><span>桃園市八德區廣興五街53號</span></div>
+<div class="contact-item"><b>時間</b><span>週六公休｜其餘時間採預約制</span></div>
+<div class="contact-item"><b>電話</b><a href="tel:0986239526">0986-239-526</a></div>
+</div>
+<div class="btns">
+<a class="btn primary" href="https://maps.app.goo.gl/2h9GzXbw1Z3kncSu6" rel="noopener" target="_blank">Google Maps 導航</a>
+<a class="btn secondary" href="https://lin.ee/oFRYAIr" rel="noopener" target="_blank">LINE 詢問／預約</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+</main>

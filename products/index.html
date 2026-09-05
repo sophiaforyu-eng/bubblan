@@ -1,0 +1,38 @@
+---
+layout: default
+title: 花漾皙產品
+description: 泡泡臉八德館代理之花漾皙產品資訊。
+permalink: /products/
+sitemap: false
+---
+<section class="page-hero">
+<div class="container">
+<div class="section-title">
+<span class="eyebrow">代理品牌</span>
+<h1>花漾皙產品</h1>
+<p class="lead">泡泡臉八德館為花漾皙品牌代理。每項產品可連到各自的電子商務購買頁。</p>
+</div>
+</div>
+</section>
+
+{% if site.products.size > 0 %}
+<section class="content-section">
+<div class="container">
+<div class="content-grid">
+{% for product in site.products %}
+<article class="article-card">
+{% if product.image %}<img class="story-photo" src="{{ product.image | relative_url }}" alt="{{ product.image_alt | default: product.title | escape }}">{% endif %}
+<h2>{{ product.title }}</h2>
+{% if product.description %}<p>{{ product.description }}</p>{% endif %}
+<div class="btns" style="margin-top:auto">
+<a class="btn text" href="{{ product.url | relative_url }}">了解產品 →</a>
+{% if product.buy_url %}
+<a class="btn primary" href="{{ product.buy_url }}" target="_blank" rel="noopener">前往購買</a>
+{% endif %}
+</div>
+</article>
+{% endfor %}
+</div>
+</div>
+</section>
+{% endif %}

@@ -1,0 +1,74 @@
+title: 泡泡臉八德館
+description: 桃園八德肌膚管理與護膚空間。單次消費、免儲值、無推銷，提供護膚項目、肌膚知識、居家保養與丙級美容考照輔導資訊。
+lang: zh-TW
+url: https://sophiaforyu-eng.github.io
+baseurl: /bubblan
+timezone: Asia/Taipei
+permalink: pretty
+
+business:
+  name: 泡泡臉八德館
+  address: 桃園市八德區廣興五街53號
+  phone_display: 0986-239-526
+  phone_href: "0986239526"
+  hours: 週六公休｜其餘時間採預約制
+  line: https://lin.ee/oFRYAIr
+  maps: https://maps.app.goo.gl/2h9GzXbw1Z3kncSu6
+  facebook: https://www.facebook.com/share/1EwEmAwMHY/
+  ai: https://ai.bubblan.tw/
+  agent_brand: 花漾皙
+
+collections:
+  knowledge:
+    output: true
+    permalink: /knowledge/:name/
+  homecare:
+    output: true
+    permalink: /homecare/:name/
+  license:
+    output: true
+    permalink: /license/:name/
+  stories:
+    output: true
+    permalink: /stories/:name/
+  products:
+    output: true
+    permalink: /products/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: knowledge
+    values:
+      layout: article
+      category_label: 肌膚知識
+  - scope:
+      path: ""
+      type: homecare
+    values:
+      layout: article
+      category_label: 居家保養
+  - scope:
+      path: ""
+      type: license
+    values:
+      layout: article
+      category_label: 丙級美容考照
+  - scope:
+      path: ""
+      type: stories
+    values:
+      layout: article
+      category_label: 來店故事
+  - scope:
+      path: ""
+      type: products
+    values:
+      layout: product
+      category_label: 花漾皙產品
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - content-templates

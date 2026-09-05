@@ -1,0 +1,46 @@
+---
+layout: default
+title: 關於我們
+description: 認識泡泡臉八德館團隊，以及我們對護膚服務、專業與消費方式的想法。
+permalink: /about/
+---
+<section class="page-hero">
+<div class="container">
+<div class="section-title">
+<span class="eyebrow">關於我們</span>
+<h1>從專業到細節，我們都放在心上</h1>
+<p class="lead">泡泡臉想做的，是讓專業可以被理解，也讓每一次消費保有選擇權。</p>
+</div>
+</div>
+</section>
+
+<section class="content-section soft">
+<div class="container carousel-shell" data-carousel>
+<div class="carousel-head">
+<div>
+<span class="eyebrow">團隊成員</span>
+<h2 style="margin:8px 0 0">在店裡，真正會照顧妳的人</h2>
+</div>
+<div class="carousel-actions">
+<button class="carousel-arrow" type="button" data-prev aria-label="往左瀏覽">←</button>
+<button class="carousel-arrow" type="button" data-next aria-label="往右瀏覽">→</button>
+</div>
+</div>
+
+<div class="carousel-track">
+{% for person in site.data.team %}
+<article class="carousel-item editorial-card team-slider-card">
+{% if person.image %}
+<img class="person-photo" src="{{ person.image | relative_url }}" alt="{{ person.alt | escape }}">
+{% endif %}
+<div class="role">{{ person.role }}</div>
+<h2>{{ person.name }}</h2>
+<p>{{ person.bio }}</p>
+<div class="credentials">
+{% for credential in person.credentials %}<span>{{ credential }}</span>{% endfor %}
+</div>
+</article>
+{% endfor %}
+</div>
+</div>
+</section>

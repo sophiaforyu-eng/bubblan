@@ -1,0 +1,34 @@
+---
+layout: default
+title: 來店故事
+description: 經客人同意公開的泡泡臉八德館真實來店紀錄與回饋。
+permalink: /stories/
+sitemap: false
+---
+{% assign approved_stories = site.stories | where: "consent_public", true | sort: "date" | reverse %}
+{% if approved_stories.size > 0 %}
+<section class="page-hero">
+<div class="container">
+<div class="section-title">
+<span class="eyebrow">來店故事</span>
+<h1>來過泡泡臉的她們</h1>
+<p class="lead">只呈現經客人同意公開的真實來店紀錄與回饋。</p>
+</div>
+</div>
+</section>
+
+<section class="content-section">
+<div class="container">
+<div class="content-grid">
+{% for post in approved_stories %}
+<article class="article-card">
+{% if post.image %}<img class="story-photo" src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title | escape }}">{% endif %}
+<h2>{{ post.title }}</h2>
+{% if post.description %}<p>{{ post.description }}</p>{% endif %}
+<a class="btn text" href="{{ post.url | relative_url }}">閱讀故事 →</a>
+</article>
+{% endfor %}
+</div>
+</div>
+</section>
+{% endif %}
