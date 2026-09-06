@@ -10,7 +10,26 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-FN2GL24QRH');
+  const originalPageLocation = window.location.href;
+
+  gtag('config', 'G-FN2GL24QRH', {
+    page_location: originalPageLocation
+  });
+
+  const params = new URLSearchParams(window.location.search);
+
+  if (
+    params.has('utm_source') ||
+    params.has('utm_medium') ||
+    params.has('utm_campaign') ||
+    params.has('utm_content')
+  ) {
+    window.history.replaceState(
+      {},
+      document.title,
+      window.location.pathname + window.location.hash
+    );
+  }
 </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
