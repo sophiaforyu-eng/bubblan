@@ -151,9 +151,12 @@ DermNet 提到，除了肉眼看得到的黑頭與閉鎖性粉刺之外，也存
 
 「清一次，以後就不會再長。」
 
-如果妳目前最大的困擾是鼻頭、下巴或其他部位的粉刺很多，但自己也分不清楚哪些適合處理，可以先看看我們目前的[護膚項目](/services/)。
+如果妳目前最大的困擾是鼻頭、下巴或其他部位的粉刺很多，但自己也分不清楚哪些適合處理，可以先看看目前的護膚項目；如果還不確定適合哪一種，也可以先用 LINE 問問我們。
 
-如果還不確定自己適合哪一種，也可以先加入官方 LINE，把妳目前最在意的部位告訴我們，再決定下一步。
+<div class="btns">
+  <a class="btn primary" href="{{ '/services/' | relative_url }}">查看護膚項目</a>
+  <a class="btn secondary" href="{{ site.business.line }}" target="_blank" rel="noopener">加入 LINE｜我想先問一下</a>
+</div>
 
 ---
 
