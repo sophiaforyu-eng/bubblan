@@ -4,11 +4,34 @@ title: 居家保養
 description: 從清潔、保濕、防曬與日常習慣整理居家肌膚照護方式，並透明揭露花漾皙品牌代理關係。
 permalink: /homecare/
 ---
+<style>
+.homecare-page-intro {
+  max-width: none;
+}
+
+.homecare-main-title {
+  white-space: nowrap;
+}
+
+.homecare-mobile-break {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .homecare-main-title {
+    white-space: normal;
+  }
+
+  .homecare-mobile-break {
+    display: block;
+  }
+}
+</style>
 <section class="page-hero">
 <div class="container">
-<div class="section-title list-page-intro">
+<div class="section-title list-page-intro homecare-page-intro">
 <span class="eyebrow">居家保養</span>
-<h1>把日常保養，做得簡單一點。</h1>
+<h1 class="homecare-main-title">把日常保養，<br class="homecare-mobile-break">做得簡單一點。</h1>
 <p class="lead">從清潔、保濕、防曬到日常習慣，先理解自己需要什麼，再決定產品怎麼搭配。</p>
 <span class="product-agent-note">泡泡臉八德館為花漾皙品牌代理</span>
 </div>
@@ -18,7 +41,7 @@ permalink: /homecare/
 <section class="content-section">
 <div class="container">
 <div class="brand-disclosure">
-我們會清楚標示泡泡臉代理的花漾皙產品；文章仍以實際需求為出發點，不把每一個肌膚問題都硬連到產品。
+先從妳的實際需求出發，整理適合的日常保養方向；需要時，再提供對應的產品資訊，讓妳更容易做選擇。
 </div>
 
 {% if site.homecare.size > 0 %}
