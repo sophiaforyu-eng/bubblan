@@ -63,9 +63,11 @@ image:
 
 ### 延伸閱讀｜粉刺這件事，可以再看懂一點
 
-<a href="{{ '/knowledge/facial-comedone-cleansing/' | relative_url }}">做臉清粉刺到底能不能清乾淨？清完還有粉刺，是沒清乾淨嗎？</a>
-
 如果妳現在最在意的就是粉刺，這篇會更完整說明：為什麼不是每一顆粉刺都適合硬清，以及清完之後還看到粉刺，不一定代表「沒有清乾淨」。
+
+<div class="btns">
+  <a class="btn primary" href="{{ '/knowledge/facial-comedone-cleansing/' | relative_url }}">做臉清粉刺到底能不能清乾淨？ →</a>
+</div>
 
 ## 乾燥、緊繃、脫屑：不一定只是「多補水」
 
@@ -181,9 +183,9 @@ image:
 
 可以先從膚況諮詢或 AI 肌膚檢測開始了解，再決定下一步。
 
-### 查看完整護膚項目
-
-<a href="{{ '/services/' | relative_url }}">查看泡泡臉八德館完整護膚項目</a>
+<div class="btns">
+  <a class="btn primary" href="{{ '/services/' | relative_url }}">查看完整護膚項目 →</a>
+</div>
 
 ## 還是不知道該選哪一種？從「我最在意的是……」開始就好
 
