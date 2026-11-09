@@ -262,6 +262,31 @@ footer .notice{margin-bottom:0}
   .section{padding:66px 0}
   .float-line{right:12px;bottom:12px}
 }
+
+.hero-policy-tags{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 15px;padding:0;list-style:none}
+.hero-policy-tags li{
+  position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;justify-content:center;
+  padding:7px 14px;min-height:38px;border:1.5px solid #b38a48;border-radius:999px;
+  background:#f0e5fa;color:#503674;font-size:.95rem;font-weight:900;line-height:1.4;white-space:nowrap;
+  box-shadow:0 2px 7px rgba(107,71,140,.09);
+}
+.hero-policy-tags li::before{
+  content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;
+  background:linear-gradient(110deg,transparent 15%,rgba(255,255,255,.9) 48%,#fff4d8 55%,transparent 82%);
+  opacity:0;transform:translateX(-100%);
+}
+.hero-policy-tags.is-shining li::before{animation:hero-policy-shine 4.5s linear .15s infinite both}
+.hero-policy-tags.is-shining li:nth-child(2)::before{animation-delay:1.15s}
+.hero-policy-tags.is-shining li:nth-child(3)::before{animation-delay:2.15s}
+.hero-policy-tags.is-paused li::before{animation-play-state:paused}
+.hero-benefits span::after{animation:none}
+@keyframes hero-policy-shine{
+  0%{opacity:0;transform:translateX(-100%)}
+  6%,14%{opacity:.88}
+  22%,100%{opacity:0;transform:translateX(100%)}
+}
+@media(max-width:380px){.hero-policy-tags{gap:6px}.hero-policy-tags li{padding-inline:11px;font-size:.9rem}}
+@media(prefers-reduced-motion:reduce){.hero-policy-tags.is-shining li::before{animation:none}}
 </style>
   <script type="application/ld+json">
   {
@@ -310,6 +335,11 @@ footer .notice{margin-bottom:0}
       <div class="eyebrow">桃園八德｜預約制護膚空間</div>
       <h1>只是想做個臉，<br>不想被推銷。</h1>
       <p class="hero-emphasis">我們懂。</p>
+      <ul class="hero-policy-tags is-shining" aria-label="消費方式">
+        <li>單次消費</li>
+        <li>不綁課</li>
+        <li>不儲值</li>
+      </ul>
       <p class="hero-lead">單次消費、不綁課、不儲值，做完就輕鬆回家。</p>
       <div class="hero-benefits">
         <span>不用先選課程</span>
